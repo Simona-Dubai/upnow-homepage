@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UpNow — Verified providers across Dubai</title>
+<meta name="description" content="Spaces, services, experiences, memberships, programs, health and protection across Dubai. Call or WhatsApp verified providers directly.">
+<link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/search.css">
+<style>
+.herosec{position:relative;padding:40px 0 34px;background:#1b2a22;z-index:20}
+.herosec .wrap{z-index:2}
+.herosec .pop,.herosec .more-pop{z-index:100}
+.trust{position:relative;z-index:1}
+.herosec .bg{position:absolute;inset:0;overflow:hidden}
+.herosec .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 6s ease}
+.herosec .bg img.on{opacity:1;transform:scale(1)}
+.herosec .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,247,244,.97) 0%,rgba(244,247,244,.88) 36%,rgba(244,247,244,.15) 70%)}
+.herosec .wrap{position:relative}
+.kick{display:inline-flex;align-items:center;gap:7px;background:var(--g1);color:var(--g8);border:1px solid var(--g2);padding:6px 12px;border-radius:99px;font-weight:700;font-size:12.5px}
+.kick .ico{width:14px;height:14px}
+.herosec h1{font-family:var(--serif);font-weight:400;font-size:64px;line-height:1;letter-spacing:-.01em;margin:18px 0 12px;color:var(--g9);max-width:640px}
+.herosec .sub{font-size:16px;color:var(--ink2);max-width:460px;margin:0 0 28px}
+.herosec .sw{max-width:1180px}
+.herosec .credit{position:absolute;right:20px;bottom:12px;font-size:11px;font-weight:700;color:#fff;background:rgba(11,61,42,.55);backdrop-filter:blur(6px);padding:4px 10px;border-radius:99px;letter-spacing:.02em}
+.trust{display:flex;gap:26px;padding:14px 0;border-bottom:1px solid var(--line);background:#fff;font-weight:600;color:var(--ink2);font-size:13px;justify-content:center;flex-wrap:wrap}
+.trust span{display:flex;align-items:center;gap:7px}.trust .ico{color:var(--g6)}
+.cats{display:flex;gap:6px;overflow-x:auto;padding:22px 0 6px}
+.cats a{flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;width:104px;padding:12px 4px;border-radius:14px;font-weight:600;font-size:12.5px;color:var(--ink2);text-align:center}
+.cats a:hover{background:#fff;color:var(--ink)}
+.cats a i{width:56px;height:56px;border-radius:14px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--g7);overflow:hidden}
+.cats a i img{width:100%;height:100%;object-fit:cover}
+.cats a i .ico{width:22px;height:22px}
+.cats a small{color:var(--ink3);font-weight:500;font-size:11px;margin-top:-5px}
+.sec{margin-top:40px}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px;gap:20px}
+.sec-h h2{font-size:24px;letter-spacing:-.02em}
+.sec-h p{margin:4px 0 0;color:var(--ink3)}
+.sec-h a{color:var(--g7);font-weight:700;display:flex;align-items:center;gap:4px;white-space:nowrap}
+.row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.pop-areas{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pop-areas a{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:700}
+.pop-areas a:hover{border-color:var(--g5)}
+.pop-areas a small{display:block;color:var(--ink3);font-weight:500;font-size:12px;margin-top:2px}
+.pop-areas .ico{color:var(--ink3)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.why div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.why .n{width:28px;height:28px;border-radius:50%;background:var(--g1);color:var(--g8);display:grid;place-items:center;font-weight:800;font-size:12.5px;margin-bottom:10px}
+.why b{display:block;margin-bottom:4px}.why span{color:var(--ink3);font-size:13px}
+@media (max-width:900px){.herosec h1{font-size:44px}.row{grid-template-columns:repeat(2,1fr)}.pop-areas,.why{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body>
+<div id="hdr"></div>
+<section class="herosec" data-screen-label="Home hero">
+  <div class="bg" id="bg"><img alt=""><img alt=""></div>
+  <div class="wrap">
+    <span class="kick" id="kick"></span>
+    <h1 id="h1"></h1>
+    <p class="sub" id="sub"></p>
+    <div class="sw" id="sw"></div>
+  </div>
+  <span class="credit" id="credit"></span>
+</section>
+<div class="trust"><span id="tr1"></span><span><svg class="ico" viewBox="0 0 24 24"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6 6l1.5-2.3L20 14.5V18a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Direct provider contact</span><span id="tr3"></span><span id="tr4"></span></div>
+<main class="wrap">
+  <div class="cats skip-scroll" id="cats"></div>
+  <div id="sections"></div>
+  <section class="sec"><div class="sec-h"><div><h2 id="areasH">Popular areas</h2><p>Jump straight to results in Dubai's most-searched communities.</p></div></div><div class="pop-areas" id="areas"></div></section>
+  <section class="sec"><div class="sec-h"><div><h2>How UpNow works</h2><p>No checkout and no booking fee. You deal with the verified provider directly.</p></div></div>
+    <div class="why" id="why"></div></section>
+</main>
+<div id="ftr"></div>
+<script src="js/data.js"></script><script src="js/common.js"></script><script src="js/filters-ui.js"></script>
+<script>
+const { VERTICALS, VORDER, LISTINGS, AREAS, offerOf } = UP;
+const { ico, esc, card, toQuery, results, blankState } = UPUI;
+document.getElementById('hdr').innerHTML = UPUI.header('home');
+document.getElementById('ftr').innerHTML = UPUI.footer();
+UPUI.updateHdrCounts();
+
+let saved = {}; try { saved = JSON.parse(localStorage.getItem('upnow.home') || '{}'); } catch (e) {}
+const S = blankState(saved.v || 'spaces', saved.o);
+
+/* Headline + sub per vertical (matches the Customer Marketplace flow) */
+const COPY = {
+  all: ['Everything Dubai, one search.', 'Spaces, services, experiences, memberships, programs, health and protection — from verified providers.'],
+  spaces: ['Find a space you can trust.', 'Apartments, holiday stays, offices, venues, courts, yachts, storage and parking. Connect with verified owners and operators.'],
+  services: ['Book a service you can trust.', 'From cleaning and maintenance to beauty and professional services. Book verified professionals.'],
+  experiences: ['Discover experiences worth remembering.', 'Tours, workshops and memorable activities from verified local hosts.'],
+  memberships: ['Join places that fit your life.', 'Compare plans, benefits, access and locations before you join.'],
+  programs: ['Find the right program to grow.', 'Nurseries, schools, universities, courses, camps and academies with clear admissions and schedules.'],
+  health: ['Find healthcare you can trust.', 'Book verified doctors, dentists, physiotherapists, diagnostics and licensed care.'],
+  insurance: ['Protect what matters to you.', 'Compare protection through verified brokers and manage policies in one account.']
+};
+const ALL_HERO = 'img/hero.jpg';
+const go = () => { location.href = 'Search.html' + toQuery(S); };
+
+/* Cross-fading hero background, driven by vertical → offering */
+const bgImgs = [...document.querySelectorAll('#bg img')]; let bgIdx = 0, bgCur = null;
+function setHero(src) {
+  if (src === bgCur) return; bgCur = src;
+  const next = bgImgs[1 - bgIdx]; const pre = new Image();
+  pre.onload = pre.onerror = () => { next.src = src; requestAnimationFrame(() => { next.classList.add('on'); bgImgs[bgIdx].classList.remove('on'); bgIdx = 1 - bgIdx; }); };
+  pre.src = src;
+}
+function heroFor() {
+  if (S.v === 'all') return ALL_HERO;
+  const O = offerOf(S.v, S.o);
+  return (O && O.hero) || VERTICALS[S.v].hero || ALL_HERO;
+}
+
+function paint() {
+  localStorage.setItem('upnow.home', JSON.stringify({ v: S.v, o: S.o }));
+  const c = COPY[S.v] || COPY.all;
+  document.getElementById('h1').textContent = c[0];
+  document.getElementById('sub').textContent = c[1];
+  document.getElementById('kick').innerHTML = ico('shield') + 'Verified providers across Dubai';
+  setHero(heroFor());
+  const O = S.v === 'all' ? null : offerOf(S.v, S.o);
+  document.getElementById('credit').textContent = O ? VERTICALS[S.v].label + ' · ' + O.label : 'All verticals';
+
+  const inV = LISTINGS.filter(l => S.v === 'all' || l.v === S.v);
+  document.getElementById('tr1').innerHTML = ico('check') + `${inV.filter(l => l.a.verified).length} verified ${S.v === 'all' ? 'listings' : VERTICALS[S.v].label.toLowerCase()} results`;
+  document.getElementById('tr3').innerHTML = ico('clock') + `${Math.round(inV.reduce((s, l) => s + l.provider.reply, 0) / inV.length)} min average reply`;
+  document.getElementById('tr4').innerHTML = ico('star') + `${(inV.reduce((s, l) => s + l.rating, 0) / inV.length).toFixed(1)} · ${inV.reduce((s, l) => s + l.reviews, 0).toLocaleString()} verified reviews`;
+
+  // rail = verticals (all) or offerings (vertical)
+  const rail = S.v === 'all'
+    ? VORDER.map(v => ({ href: '?v=' + v, label: VERTICALS[v].label, n: LISTINGS.filter(l => l.v === v).length, img: VERTICALS[v].hero, icon: VERTICALS[v].icon }))
+    : VERTICALS[S.v].offers.map(o => ({ href: toQuery(blankState(S.v, o.id)), label: o.label, n: LISTINGS.filter(l => l.cat === o.id && l.v === S.v).length, img: o.hero || o.img[0], icon: VERTICALS[S.v].icon }));
+  document.getElementById('cats').innerHTML = rail.map(r => `<a href="Search.html${r.href}"><i>${r.img ? `<img src="${r.img}" alt="">` : ico(r.icon)}</i>${esc(r.label)}<small>${r.n} listings</small></a>`).join('');
+
+  const blocks = S.v === 'all'
+    ? VORDER.map(v => ({ t: VERTICALS[v].label, p: COPY[v][1], list: LISTINGS.filter(l => l.v === v).sort((a, b) => b.rating - a.rating), href: '?v=' + v }))
+    : VERTICALS[S.v].offers.map(o => { const B = blankState(S.v, o.id); return { t: o.h1, p: o.basis + ' · verified providers', list: results(B), href: toQuery(B), on: o.id === S.o }; })
+        .sort((a, b) => (b.on || 0) - (a.on || 0));
+  document.getElementById('sections').innerHTML = blocks.filter(b => b.list.length).map(b => `
+    <section class="sec"><div class="sec-h"><div><h2>${esc(b.t)}</h2>${b.p ? `<p>${esc(b.p)}</p>` : ''}</div><a href="Search.html${b.href}">See all ${b.list.length} ${ico('chevR')}</a></div>
+    <div class="row">${b.list.slice(0, 6).map(l => card(l)).join('')}</div></section>`).join('');
+
+  const pool = S.v === 'all' ? inV : inV.filter(l => l.cat === S.o);
+  const areas = AREAS.map(a => ({ ...a, c: pool.filter(l => l.loc === a.id || (l.coverage || []).includes(a.id)).length })).filter(a => a.c).sort((a, b) => b.c - a.c).slice(0, 8);
+  document.getElementById('areasH').textContent = O ? `Popular areas for ${O.h1.toLowerCase()}` : 'Popular areas';
+  document.getElementById('areas').innerHTML = areas.map(a => `<a href="Search.html${toQuery({ ...blankState(S.v, S.o), loc: [a.id] })}"><span>${esc(a.n)}<small>${a.c} listings</small></span>${ico('chevR')}</a>`).join('');
+
+  document.getElementById('why').innerHTML = [
+    ['Find what you need', 'Choose a vertical and offering, then search with the filters that matter.'],
+    ['Compare verified providers', 'Review availability, pricing, ratings and provider information.'],
+    ['Contact or transact', 'Call, WhatsApp, request, apply, reserve, book, join or enrol.'],
+    ['Manage it in UpNow', 'Track actions, payments, documents, messages and support after sign-in.']
+  ].map(([b, s], i) => `<div><span class="n">${i + 1}</span><b>${b}</b><span>${s}</span></div>`).join('');
+}
+UPF.SearchBar(document.getElementById('sw'), S, { mode: 'hero', onChange: paint, onSubmit: go });
+paint();
+// preload hero images so switching is instant
+VORDER.forEach(v => VERTICALS[v].offers.forEach(o => { if (o.hero) new Image().src = o.hero; }));
+</script>
+</body></html>
