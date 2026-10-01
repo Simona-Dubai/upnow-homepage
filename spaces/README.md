@@ -13,8 +13,3 @@ Provider onboarding → Leads → Demand → Communications / Channels → Calen
 - Customer assets: `css/`, `js/`, `img/`
 - Provider workspace: Demand, Leads, Communications, Calendar and Settings
 
-## Removed
-- Scratch/work-in-progress files
-- Source-map artifacts
-- Unused provider pages outside the Spaces flow
-- Extra provider page index/design-system pages
